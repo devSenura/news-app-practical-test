@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginEnd="24dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.469">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/signup_sub_heading"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/lo_signIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="1dp"
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                    <EditText
+                        android:id="@+id/et_fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_errorFullName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="1dp"
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                    <EditText
+                        android:id="@+id/et_registerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_errorRegisterEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="1dp"
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                    <EditText
+                        android:id="@+id/et_registerUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_errorRegisterUsername"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/country"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="1dp"
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+
+                    <Spinner
+                        android:id="@+id/sp_registerCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:dropDownVerticalOffset="0dp"
+                        android:popupBackground="@color/white"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/mySpinnerItemStyle"
+                        android:drawSelectorOnTop="true" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_errorRegisterCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView112"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView112"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="1dp"
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView112">
+
+
+                    <Spinner
+                        android:id="@+id/sp_registerLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:dropDownVerticalOffset="0dp"
+                        android:popupBackground="@color/white"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/mySpinnerItemStyle"
+                        android:drawSelectorOnTop="true" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_errorRegisterLanguage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView112" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userPassword"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="1dp"
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                    <Button
+                        android:id="@+id/btn_signUpPwShow"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="visible">
+
+                    </Button>
+
+                    <EditText
+                        android:id="@+id/et_registerPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_errorRegisterPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_signUp"
+                style="@style/AppButtonMain"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/sign_up" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lo_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/redirect_sign_in"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

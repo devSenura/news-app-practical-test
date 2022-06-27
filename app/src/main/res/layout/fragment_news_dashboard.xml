@@ -5,39 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DashboardActivity">
+    android:background="@color/white"
+    tools:context=".ui.fragments.NewsDashboardFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="60dp">
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/btn_notification"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:text="Button"
+            android:background="@drawable/ic_notification_available"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <SearchView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/bordered_background"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintEnd_toStartOf="@+id/btn_notification"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        </SearchView>
+            <EditText
+                android:id="@+id/etSearchNews"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="visible"
+                android:src="@mipmap/ic_search"
+                app:layout_constraintBottom_toBottomOf="@+id/etSearchNews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etSearchNews" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:background="@mipmap/ic_cancel"
+                app:layout_constraintBottom_toBottomOf="@+id/etSearchNews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etSearchNews" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -50,6 +91,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/loLatestNewsSection"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:visibility="visible">
@@ -72,6 +114,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <LinearLayout
+                        android:id="@+id/lo_seeAllNews"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
@@ -118,6 +161,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_newsCategories"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:scrollbars="horizontal"
@@ -125,11 +169,26 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_generalNewsList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                tools:listitem="@layout/general_news_list_item"
+                android:layout_marginTop="16dp"/>
 
+
+            <ProgressBar
+                android:id="@+id/paginationProgressBar"
+                style="?attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:indeterminateTint="@color/colorPrimary"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center" />
 
         </LinearLayout>
+
+
 
 
     </ScrollView>
